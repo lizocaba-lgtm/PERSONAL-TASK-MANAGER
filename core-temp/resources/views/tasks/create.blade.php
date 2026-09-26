@@ -1,29 +1,14 @@
-@extends('layouts.app')
-
-@section('content')
-
-<h1>Add New Task</h1>
-
 <form action="{{ route('tasks.store') }}" method="POST">
-    @csrf
+    @csrf   ← THIS LINE MUST BE HERE! DON'T REMOVE IT!
 
-    <p>
-        <label><strong>Task Name *</strong></label><br>
-        <input type="text" name="task_name" required>
-    </p>
+    <label>Task Name *</label>
+    <input type="text" name="task_name" required>
 
-    <p>
-        <label><strong>Description</strong></label><br>
-        <textarea name="description" rows="4"></textarea>
-    </p>
+    <label>Description</label>
+    <textarea name="description"></textarea>
 
-    <p>
-        <label><strong>Due Date *</strong></label><br>
-        <input type="date" name="due_date" required>
-    </p>
+    <label>Due Date *</label>
+    <input type="date" name="due_date" required>
 
     <button type="submit">Save Task</button>
-    <a href="{{ route('tasks.index') }}">Cancel</a>
 </form>
-
-@endsection

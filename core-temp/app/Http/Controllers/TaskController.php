@@ -7,18 +7,6 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function index()
-    {
-        $tasks = Task::latest()->get();
-        return view('tasks.index', compact('tasks'));
-    }
-
-    // ↓ THIS FUNCTION MUST BE HERE ↓
-    public function create()
-    {
-        return view('tasks.create');
-    }
-
     public function store(Request $request)
     {
         $request->validate([
@@ -33,6 +21,6 @@ class TaskController extends Controller
             'due_date' => $request->due_date
         ]);
 
-        return redirect()->route('tasks.index');
+        return redirect()->route('tasks.index')->with('success', 'Task added!');
     }
 }
