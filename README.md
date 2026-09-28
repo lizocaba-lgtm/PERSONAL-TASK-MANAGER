@@ -38,7 +38,8 @@ Click **+ Add New Task** → fill in Task Name, Description, Due Date → click 
 ### 3. Display the Task
 After saving, the task appears in the list. New tasks show as **Pending** 🟡.
 
-<img width="100%" alt="Display Task" src="https://github.com/lizocaba-lgtm/PERSONAL-TASK-MANAGER/blob/main/Display%20the%20task.png" />
+<img width="720" height="374" alt="Display the task" src="https://github.com/user-attachments/assets/9c092322-1a65-4123-9a07-236d1ec20ac1" />
+
 
 ---
 
@@ -47,21 +48,23 @@ Edit any task → change Status dropdown → Save.
 - 🟡 **Pending** = Yellow badge
 - 🟢 **Completed** = Green badge
 
-<img width="100%" alt="Update Status" src="https://github.com/lizocaba-lgtm/PERSONAL-TASK-MANAGER/blob/main/Update%20task.png" />
+<img width="720" height="372" alt="Update A Task" src="https://github.com/user-attachments/assets/922a53e3-d7e6-4717-be55-9c6b3cde88cf" />
 
 ---
 
 ### 5. Editing a Task
 Click **Edit** → update details → click **Update Task**.
+<img width="720" height="373" alt="Update task" src="https://github.com/user-attachments/assets/b566e941-45f5-4777-9908-457cfc6666e5" />
 
-<img width="100%" alt="Edit Task" src="https://github.com/lizocaba-lgtm/PERSONAL-TASK-MANAGER/blob/main/Edit%20Task.png" />
+
 
 ---
 
 ### 6. Deleting a Task
 Click **Delete** → confirm → task is removed.
 
-<img width="100%" alt="Delete Task" src="https://github.com/lizocaba-lgtm/PERSONAL-TASK-MANAGER/blob/main/Deleting%20a%20TASK.png" />
+<img width="720" height="374" alt="Deleting a TASK" src="https://github.com/user-attachments/assets/9052517b-9529-4d55-b012-3eb2a92aa062" />
+
 
 ---
 
