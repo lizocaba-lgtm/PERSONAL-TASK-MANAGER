@@ -24,14 +24,16 @@
 ### 1. Task Board
 This is the main page where all tasks are displayed in a table.
 
-<img width="100%" alt="Task Board" src="https://github.com/lizocaba-lgtm/PERSONAL-TASK-MANAGER/blob/main/task_board.png" />
+<img width="720" height="372" alt="task board" src="https://github.com/user-attachments/assets/00f46cb4-bf1c-42a0-a157-498042cdc728" />
+
 
 ---
 
 ### 2. Adding a Task
 Click **+ Add New Task** → fill in Task Name, Description, Due Date → click **Save Task**.
 
-<img width="100%" alt="Add Task" src="https://github.com/lizocaba-lgtm/PERSONAL-TASK-MANAGER/blob/main/Adding%20a%20Task.png" />
+<img width="1912" height="987" alt="Adding a Task" src="https://github.com/user-attachments/assets/72977276-312a-4b80-b137-5de17cc9b155" />
+
 
 ---
 
@@ -64,7 +66,7 @@ Click **Edit** → update details → click **Update Task**.
 Click **Delete** → confirm → task is removed.
 
 <img width="720" height="374" alt="Deleting a TASK" src="https://github.com/user-attachments/assets/9052517b-9529-4d55-b012-3eb2a92aa062" />
-
+<img width="720" height="368" alt="task deleted" src="https://github.com/user-attachments/assets/364985e4-df44-4846-9397-3968fdb3ebbe" />
 
 ---
 
