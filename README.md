@@ -56,10 +56,8 @@ Edit any task → change Status dropdown → Save.
 
 ### 5. Editing a Task
 Click **Edit** → update details → click **Update Task**.
-<img width="720" height="373" alt="Update task" src="https://github.com/user-attachments/assets/b566e941-45f5-4777-9908-457cfc6666e5" />
-<img width="720" height="373" alt="Update task" src="https://github.com/user-attachments/assets/f5b8b586-e7ed-45da-8255-20afd9eedbbe" />
-
-
+<img width="720" height="376" alt="Edit" src="https://github.com/user-attachments/assets/5a00db20-4999-43a4-a295-81793106ce4c" />
+<img width="720" height="372" alt="Editing a task" src="https://github.com/user-attachments/assets/0c9132dd-a082-43f2-9ba3-f8e606a4eaa1" />
 
 
 
