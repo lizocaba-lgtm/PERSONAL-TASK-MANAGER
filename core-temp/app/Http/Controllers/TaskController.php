@@ -18,7 +18,6 @@ class TaskController extends Controller
         return view('tasks.create');
     }
 
-    // 2. Save submitted task to database
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -27,20 +26,38 @@ class TaskController extends Controller
             'due_date'    => 'required|date',
         ]);
 
-        Task::create([
-            'task_name'   => $request->task_name,
-            'description' => $request->description,
-            'due_date'    => $request->due_date,
-            'status'      => 'Pending',
-        ]);
+        $validated['status'] = 'Pending';
 
-        return redirect()->route('tasks.index');
+        Task::create($validated);
+
+        return redirect('/tasks');
     }
 
-    public function destroy(Task $task)
+    public function edit($id)
     {
-        $task->delete();
-
-        return redirect()->route('tasks.index');
+        $task = Task::findOrFail($id);
+        return view('tasks.edit', compact('task'));
     }
+
+ public function update(Request $request, $id)
+{
+    $task = Task::findOrFail($id);
+    
+    $task->task_name = $request->task_name;
+    $task->description = $request->description;
+    $task->status = $request->status;
+    $task->due_date = $request->due_date;
+    
+    $task->save();  
+
+    return redirect('/tasks');
+}
+
+   public function destroy($id)
+{
+    $task = Task::findOrFail($id);
+    $task->delete();
+    
+    return redirect('/tasks')->with('success', 'Task deleted!');
+}
 }

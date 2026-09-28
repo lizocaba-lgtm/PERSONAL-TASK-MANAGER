@@ -1,41 +1,53 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Task</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
 
-@section('content')
+<div class="container my-5" style="max-width: 600px;">
+    <div class="card shadow-sm p-4">
+        <h3 class="mb-4">Add New Task</h3>
 
-<h1>Add New Task</h1>
+        <!-- Display Validation Errors -->
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-@if ($errors->any())
-    <div style="background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
-<form action="{{ route('tasks.store') }}" method="POST">
+       <form action="/tasks" method="POST">
     @csrf
 
-    <div style="margin-bottom: 20px;">
-        <label style="font-weight: bold; display: block; margin-bottom: 6px;">Task Name *</label>
-        <input type="text" name="task_name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <div class="mb-3">
+        <label>Task Name *</label>
+        <input type="text" name="task_name" class="form-control" required>
     </div>
 
-    <div style="margin-bottom: 20px;">
-        <label style="font-weight: bold; display: block; margin-bottom: 6px;">Description</label>
-        <textarea name="description" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea name="description" class="form-control"></textarea>
     </div>
 
-    <div style="margin-bottom: 20px;">
-        <label style="font-weight: bold; display: block; margin-bottom: 6px;">Due Date *</label>
-        <input type="date" name="due_date" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <div class="mb-3">
+        <label>Due Date *</label>
+        <input type="date" name="due_date" class="form-control" required>
     </div>
 
-    <button type="submit" style="background: #0066ff; color: white; border: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; cursor: pointer;">Save Task</button>
-    <a href="{{ route('tasks.index') }}" style="margin-left: 12px; color: #0066ff; text-decoration: none;">Cancel</a>
-</form>
-
+    <button type="submit" class="btn btn-primary">Save Task</button>
+    <a href="/tasks" class="btn btn-link">Cancel</a>
+   </form>
+       
+    </div>
 </div>
 
-@endsection
+</body>
+</html>
